@@ -25,4 +25,5 @@ class ProyectoForm(FlaskForm):
     descripcion = StringField('Descripción',validators=[DataRequired()])
     imagen = StringField('Imagen',validators=[DataRequired()])
     url = StringField('Url',validators=[DataRequired()])
-    submit = SubmitField('Actualizar Datos')
+    submit = SubmitField('Guardar')
+

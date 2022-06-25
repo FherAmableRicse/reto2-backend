@@ -26,15 +26,19 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Biografia
                         </a>
-                        <a class="nav-link" href="{{ url_for('admin.proyectos') }}"">
-                            <div class=" sb-nav-link-icon"><i class="fas fa-table"></i>
-                    </div>
-                    Proyectos
-                    </a>
+                        <a class="nav-link" href="{{ url_for('admin.proyectos') }}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Proyectos
+                        </a>
+                        
+                        <a class="nav-link" href="{{ url_for('admin.contactos') }}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-phone-square-alt"></i></div>
+                            Contactos
+                        </a>
+                   </div>
                 </div>
+            </nav>
         </div>
-        </nav>
-    </div>
     <div id="layoutSidenav_content">
         <main>
             {% block content %}{% endblock %}

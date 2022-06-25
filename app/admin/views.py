@@ -142,3 +142,15 @@ def proyecto(id=''):
 def delProyecto(id=''):
     fb.deleteDocument('proyectos',id)
     return redirect(url_for('admin.proyectos'))  
+
+
+@admin.route('/contactos',methods=['GET','POST'])
+def contactos():
+    if('token' in session):
+        listaContactos = fb.getCollection('contactos')
+        context = {
+            'contactos':listaContactos
+        }
+    else:
+        return redirect(url_for('admin.login'))
+    return render_template('admin/contactos.html',**context)

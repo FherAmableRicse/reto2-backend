@@ -15,7 +15,7 @@
         <!-- About Section Content-->
         <div class="row">
             <div class="col-lg-4 ms-auto">
-                <p class="lead"><img src="{{session.biografia['foto']}}" alt="..." /></p>
+                <p class="lead"><img class="masthead-avatar" src="{{session.biografia['foto']}}" alt="foto" /></p>
             </div>
             <div class="col-lg-4 me-auto">
                 <p class="lead">{{session.biografia['resumen']}}</p>
@@ -23,7 +23,7 @@
         </div>
         <!-- About Section Button-->
         <div class="text-center mt-4">
-            <a class="btn btn-xl btn-outline-light" href="{{session.biografia['cv']}}">
+            <a class="btn btn-xl btn-outline-light" href="{{session.biografia['cv']}}" target="_blank">
                 <i class="fas fa-download me-2"></i>
                 Descagar CV!
             </a>
