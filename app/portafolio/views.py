@@ -29,7 +29,7 @@ def acercade():
 @portafolio.route('/contacto',methods=['GET','POST'])
 def contacto():
     contacto_form = ContactoForm()
-
+    
     if contacto_form.validate_on_submit():
     
         dataNuevoProyecto = {
@@ -46,5 +46,6 @@ def contacto():
         'contacto_form':contacto_form
     }
     return render_template('portafolio/contacto.html',**context)
+    
    
   

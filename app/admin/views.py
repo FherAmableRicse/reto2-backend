@@ -151,6 +151,6 @@ def contactos():
         context = {
             'contactos':listaContactos
         }
+        return render_template('admin/contactos.html',**context)
     else:
         return redirect(url_for('admin.login'))
-    return render_template('admin/contactos.html',**context)
