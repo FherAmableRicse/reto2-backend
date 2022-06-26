@@ -3,14 +3,12 @@
 {% block content %}
 
 <div class="container-fluid px-4">
-
-
-
     <h1 class="mt-4">DATOS DE MI BIOGRAFIA</h1>
     {{ render_form(biografia_form) }}
     {%for message in get_flashed_messages() %}
     <div class="alert alert-info">
-        {{message}}
+        {{message}} 
+        <button type="button" class="btn-close ms-" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endfor %}
 </div>

@@ -1,5 +1,5 @@
 from flask import render_template,redirect,url_for,session,flash
-
+import time
 from . import admin
 from .forms import LoginForm,BiografiaForm,ProyectoForm
 
@@ -70,11 +70,14 @@ def biografia():
             }
             resultadoUpdateBiografia = fb.updateDocument('biografia','IMlbsNfnTxWxtOjlD2dk',dataBiografiaActualizada)
             flash("Datos Actualizados")
+           
             #biografia_form = BiografiaForm(data=dataBiografiaActualizada)
         context = {
             'biografia_form':biografia_form
         }
+   
         return render_template('admin/biografia.html',**context)
+        
     else:
         return redirect(url_for('admin.login'))
 
